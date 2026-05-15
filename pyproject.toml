@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pubplot"
+version = "0.1.0"
+description = "Publication-quality Matplotlib styling utilities for scientific figures."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "matplotlib>=3.5",
+    "numpy>=1.20",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6",
+]
+
+[project.scripts]
+pubplot-example = "pubplot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

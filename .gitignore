@@ -1,0 +1,14 @@
+.mplconfig/
+.git-local/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+build/
+dist/
+*.egg-info/
+
+.venv/
+venv/
+
+figures/
